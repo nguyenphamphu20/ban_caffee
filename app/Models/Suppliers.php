@@ -1,0 +1,12 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Suppliers extends Model
+{
+    protected $table = "nha_cung_caps";
+    protected $fillable = ["cung_cap_id", "ten_cung_cap", "nguoi_lien_he", "email", "sdt", "dia_chi"];
+    public $timestamps = false;
+}
