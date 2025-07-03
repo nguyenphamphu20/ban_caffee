@@ -34,7 +34,17 @@ class InventorySeeder extends Seeder
             [
                 'san_pham_id' => 5,
                 'so_luong_con_lai' => 15
-            ]
+            ],
+            ['san_pham_id' => 6, 'so_luong_con_lai' => 20],
+            ['san_pham_id' => 7, 'so_luong_con_lai' => 35],
+            ['san_pham_id' => 8, 'so_luong_con_lai' => 25],
+            ['san_pham_id' => 9, 'so_luong_con_lai' => 15],
+            ['san_pham_id' => 10, 'so_luong_con_lai' => 40],
+            ['san_pham_id' => 11, 'so_luong_con_lai' => 30],
+            ['san_pham_id' => 12, 'so_luong_con_lai' => 10],
+            ['san_pham_id' => 13, 'so_luong_con_lai' => 18],
+            ['san_pham_id' => 14, 'so_luong_con_lai' => 22],
+            ['san_pham_id' => 15, 'so_luong_con_lai' => 12]
         ];
 
         try {

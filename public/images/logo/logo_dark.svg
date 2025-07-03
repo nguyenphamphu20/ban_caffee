@@ -1,0 +1,31 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg-circle { fill: #1E3D59; }
+    .circle-border { fill: none; stroke: #F0F8FF; stroke-width: 6; }
+    .cup { fill: #4F86C6; stroke: #F0F8FF; stroke-width: 2; }
+    .steam { stroke: #A3C0DD; stroke-width: 2; fill: none; stroke-linecap: round; }
+    .text-main {
+      font-family: 'Georgia', serif;
+      font-size: 48px;
+      fill: #F0F8FF;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .text-sub {
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      fill: #A3C0DD;
+      letter-spacing: 4px;
+    }
+  </style>
+
+  <circle class="bg-circle" cx="150" cy="150" r="120"/>
+  <circle class="circle-border" cx="150" cy="150" r="120"/>
+  <ellipse class="cup" cx="150" cy="185" rx="40" ry="18"/>
+  <rect class="cup" x="110" y="140" width="80" height="45" rx="12" ry="12"/>
+  <path class="cup" d="M190 155 Q210 160 195 175" fill="none" stroke="#F0F8FF" stroke-width="3"/>
+  <path class="steam" d="M135 135 C130 120, 140 105, 135 90"/>
+  <path class="steam" d="M165 135 C160 120, 170 105, 165 90"/>
+  <text class="text-main" x="80" y="70">Tisu</text>
+  <text class="text-sub" x="90" y="100">COFFEE &amp; TEA</text>
+</svg>

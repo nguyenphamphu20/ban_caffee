@@ -32,6 +32,24 @@ class StaffSeeder extends Seeder
                 'vai_tro' => 'Nhân Viên Thu Ngân',
                 'email' => 'tranminhtuan@coffeeshop.com',
                 'sdt' => '0912000003'
+            ],
+            [
+                'ten_nhan_vien' => 'Lê Thị Hồng',
+                'vai_tro' => 'Nhân Viên Phục Vụ',
+                'email' => 'lethihong@coffeeshop.com',
+                'sdt' => '0912000004'
+            ],
+            [
+                'ten_nhan_vien' => 'Võ Minh Khôi',
+                'vai_tro' => 'Barista',
+                'email' => 'vominhkhoi@coffeeshop.com',
+                'sdt' => '0912000005'
+            ],
+            [
+                'ten_nhan_vien' => 'Đặng Thị Lan',
+                'vai_tro' => 'Nhân Viên Thu Ngân',
+                'email' => 'dangthilan@coffeeshop.com',
+                'sdt' => '0912000006'
             ]
         ];
 

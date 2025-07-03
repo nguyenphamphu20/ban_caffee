@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="300"><svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg-circle {
+      fill: #E3F2FD;
+    }
+    .circle-border {
+      fill: none;
+      stroke: #1E3D59;
+      stroke-width: 6;
+    }
+    .cup {
+      fill: #64A6BD;
+      stroke: #1E3D59;
+      stroke-width: 2;
+    }
+    .steam {
+      stroke: #A3C0DD;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+    }
+    .text-main {
+      font-family: 'Georgia', serif;
+      font-size: 48px;
+      fill: #1E3D59;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px #ffffff;
+    }
+    .text-sub {
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      fill: #4F86C6;
+      letter-spacing: 4px;
+    }
+  </style>
+
+  <!-- Vòng tròn nền -->
+  <circle class="bg-circle" cx="150" cy="150" r="120"></circle>
+  <circle class="circle-border" cx="150" cy="150" r="120"></circle>
+
+  <!-- Cốc cà phê -->
+  <ellipse class="cup" cx="150" cy="185" rx="40" ry="18"></ellipse>
+  <rect class="cup" x="110" y="140" width="80" height="45" rx="12" ry="12"></rect>
+  <path class="cup" d="M190 155 Q210 160 195 175" fill="none" stroke="#1E3D59" stroke-width="3"></path>
+
+  <!-- Hơi nước -->
+  <path class="steam" d="M135 135 C130 120, 140 105, 135 90"></path>
+  <path class="steam" d="M165 135 C160 120, 170 105, 165 90"></path>
+
+  <!-- Tên thương hiệu -->
+  <text class="text-main" x="80" y="70">Tisu</text>
+  <text class="text-sub" x="90" y="100">COFFEE &amp; TEA</text>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>

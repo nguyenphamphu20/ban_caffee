@@ -1,3 +1,20 @@
 html.dark {
+    --body-background: #292e39;
     --text-color: #fff;
+
+    --header-background: #171c28;
+
+    // navbar
+    --navbar-background: #292e39;
+    --navbar-shadow: rgba(23, 28, 40, 0.4);
+
+    .icon {
+        filter: brightness(0) saturate(100%) invert(98%) sepia(55%)
+            saturate(2566%) hue-rotate(182deg) brightness(116%) contrast(96%);
+    }
+
+    .icon-other {
+        filter: brightness(0) saturate(100%) invert(4%) sepia(63%)
+            saturate(2263%) hue-rotate(235deg) brightness(98%) contrast(90%);
+    }
 }

@@ -16,6 +16,7 @@ return new class extends Migration
                 $table->id("danh_muc_id");
                 $table->string("ten_danh_muc", 100);
                 $table->string("mo_ta", 200);
+                $table->string("hinh", 100);
             });
         }
     }
