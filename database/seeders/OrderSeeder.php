@@ -38,6 +38,30 @@ class OrderSeeder extends Seeder
                 'trang_thai' => 'Đã Hủy',
                 'phuong_thuc_thanh_toan' => 'Tiền Mặt',
                 'ghi_chu' => 'Khách không đến lấy'
+            ],
+            [
+                'khach_hang_id' => 4,
+                'thoi_gian' => '2025-07-01 09:20:00',
+                'tong_tien' => 95000,
+                'trang_thai' => 'Đã Xong',
+                'phuong_thuc_thanh_toan' => 'Tiền Mặt',
+                'ghi_chu' => 'Không đường'
+            ],
+            [
+                'khach_hang_id' => 5,
+                'thoi_gian' => '2025-07-01 15:45:00',
+                'tong_tien' => 140000,
+                'trang_thai' => 'Đang Làm',
+                'phuong_thuc_thanh_toan' => 'Chuyển Khoản',
+                'ghi_chu' => 'Giao hàng tận nơi'
+            ],
+            [
+                'khach_hang_id' => 6,
+                'thoi_gian' => '2025-07-02 11:10:00',
+                'tong_tien' => 210000,
+                'trang_thai' => 'Đã Xong',
+                'phuong_thuc_thanh_toan' => 'Tiền Mặt',
+                'ghi_chu' => 'Yêu cầu ly giữ nhiệt'
             ]
         ];
 

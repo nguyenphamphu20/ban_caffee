@@ -35,6 +35,27 @@ class SupplierSeeder extends Seeder
                 'email' => 'banhngot@nhapkhau.com',
                 'sdt' => '0912300003',
                 'dia_chi' => '789 Đường Bánh, Q.5, TP.HCM'
+            ],
+            [
+                'ten_cung_cap' => 'Nguyên Liệu Nước Ép Tươi',
+                'nguoi_lien_he' => 'Nguyễn Văn Giang',
+                'email' => 'nuocaptuoi@cungcap.com',
+                'sdt' => '0912300004',
+                'dia_chi' => '101 Đường Trái Cây, Q.10, TP.HCM'
+            ],
+            [
+                'ten_cung_cap' => 'Socola Nhập Khẩu Châu Âu',
+                'nguoi_lien_he' => 'Trần Văn Bảo',
+                'email' => 'socola@chauau.com',
+                'sdt' => '0912300005',
+                'dia_chi' => '202 Đường Socola, Q.7, TP.HCM'
+            ],
+            [
+                'ten_cung_cap' => 'Bánh Mì & Đồ Ăn Nhanh',
+                'nguoi_lien_he' => 'Lý Thị Cẩm',
+                'email' => 'banhmi@anviet.com',
+                'sdt' => '0912300006',
+                'dia_chi' => '303 Đường Bánh Mì, Q.Gò Vấp, TP.HCM'
             ]
         ];
 
