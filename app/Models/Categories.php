@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Categories extends Model
 {
     protected $table = "danh_mucs";
-    protected $fillable = ["danh_muc_id", "ten_danh_muc", "mo_ta"];
+    protected $fillable = ["danh_muc_id", "ten_danh_muc", "gia", "mo_ta"];
     public $timestamps = false;
 
     public function products()

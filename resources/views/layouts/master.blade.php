@@ -21,13 +21,19 @@
 
 <body>
     {{-- header --}}
-    <header class="header py-5">
+    <header class="header py-3 fixed-top">
         @include("partials.header")
     </header>
 
     <section class="carousel">
         <div class="container">
             @include("partials.carousel")
+        </div>
+    </section>
+
+    <section class="category">
+        <div class="container">
+            @include("partials.category")
         </div>
     </section>
 

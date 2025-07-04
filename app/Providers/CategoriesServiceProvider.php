@@ -25,5 +25,10 @@ class CategoriesServiceProvider extends ServiceProvider
             $categories = Categories::all();
             $view->with("categories", $categories);
         });
+
+        View::composer("partials.category", function ($view) {
+            $categories = Categories::all();
+            $view->with("categories", $categories);
+        });
     }
 }

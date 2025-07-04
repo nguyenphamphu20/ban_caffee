@@ -2,7 +2,7 @@ html.light {
     --body-background: #f6f6f6;
     --text-color: #1a162e;
 
-    --header-background: #eee;
+    --header-background: rgba(238, 238, 238, 0.7);
 
     // navbar
     --navbar-background: #fff;
@@ -17,4 +17,7 @@ html.light {
         filter: brightness(0) saturate(100%) invert(98%) sepia(55%)
             saturate(2566%) hue-rotate(182deg) brightness(116%) contrast(96%);
     }
+
+    --category-card-background: #eee;
+    --category-img-background: #fff;
 }
