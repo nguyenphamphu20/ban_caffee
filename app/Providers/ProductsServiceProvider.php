@@ -30,5 +30,11 @@ class ProductsServiceProvider extends ServiceProvider
                 "listOfTea" => $listOfTea,
             ]);
         });
+
+        View::composer("frontend.home", function ($view) {
+            $listOfProducts = Products::all();
+
+            $view->with("listOfProducts", $listOfProducts);
+        });
     }
 }

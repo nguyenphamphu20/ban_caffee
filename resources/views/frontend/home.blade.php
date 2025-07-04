@@ -18,20 +18,18 @@
             <div class="row">
                 <h1 class="heading-lv-2">Tất cả</h1>
             </div>
-            <div class="row row-cols-4 mt-5">
+            <div class="row row-cols-4 mt-5 g-4">
+                @foreach ($listOfProducts as $product )
                 <div class="col">
-                    <div class="home__card">
-                        <img src="{{asset('images/product/ca-phe-den.png')}}" alt="" class="home__img">
-                        <div class="home__title">Cà Phê Đen</div>
-                        <div class="home__resource">Việt Nam</div>
-                        <div class="home__group">
-                            <div class="home__price">25.000đ</div>
-                            <button
-                                class="btn btn-{{session('theme','light') === 'light' ? 'dark' : 'light' }} home__btn">Mua
-                                hàng</button>
-                        </div>
-                    </div>
+                    <x-card-product image="{{$product->hinh}}" title="{{$product->ten_san_pham}}"
+                        desc="{{$product->mo_ta}}" resource="{{$product->nguon_goc}}" price="{{$product->gia}}"
+                        taste="{{$product->huong_vi}}">
+                    </x-card-product>
                 </div>
+                @endforeach
+
+
+
             </div>
     </section>
 </main>
