@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 class CommonController extends Controller
 
 {
-    public function index()
+    public function home()
     {
-        return view("layouts.master");
+        return view("frontend.home");
     }
 
-    public function change(Request $request)
+    public function theme(Request $request)
     {
         $currentTheme = $request->input("theme");
         $newTheme = ($currentTheme === "dark") ? "light" : "dark";
