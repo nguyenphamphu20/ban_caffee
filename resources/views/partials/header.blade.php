@@ -25,7 +25,7 @@
                             <li>
                                 <a class="dropdown-item py-2 dropdown-item__custom d-flex gap-4 align-items-center navbar__link"
                                     href="#">
-                                    <img class="icon navbar__icon" src="{{asset('./images/navbar/'.$category->hinh)}}"
+                                    <img class="navbar__icon" src="{{asset('./images/category/'.$category->hinh)}}"
                                         alt="{{$category->ten_danh_muc}}">
                                     {{$category->ten_danh_muc}}
                                 </a>

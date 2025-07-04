@@ -25,5 +25,6 @@
 
     .header &__link {
         color: var(--text-color);
+        text-underline-offset: 2px;
     }
 }
