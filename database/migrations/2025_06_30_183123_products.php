@@ -20,6 +20,7 @@ return new class extends Migration
                 $table->enum("do_rang", ["Light", "Medium", "Dark"]);
                 $table->string("nguon_goc", 100);
                 $table->string("huong_vi", 100);
+                $table->string("gia", 100);
                 $table->string("hinh", 100);
                 $table->enum("trang_thai", ["Còn Hàng", "Đã Hết"]);
 

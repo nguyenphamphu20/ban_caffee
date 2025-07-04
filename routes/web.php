@@ -3,5 +3,6 @@
 use App\Http\Controllers\CommonController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [CommonController::class, "index"]);
-Route::post('/', [CommonController::class, "change"])->name("themes.change");
+Route::redirect("/", "/home");
+Route::get('/home', [CommonController::class, "home"])->name("home");
+Route::post('/home', [CommonController::class, "theme"])->name("home.theme");

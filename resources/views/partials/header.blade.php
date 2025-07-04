@@ -92,7 +92,7 @@
             </form>
             <a href="#" class="header__link">Login</a> |
             <a href="#" class="header__link">Register</a>
-            <form action="{{route('themes.change')}}" method="post">
+            <form action="{{route('home.theme')}}" method="post">
                 @csrf
                 <input type="hidden" name="theme" value="{{session('theme','light')}}">
                 <button type="submit" class="btn">
