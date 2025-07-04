@@ -9,7 +9,7 @@
     </div>
 
     <!-- Slides -->
-    <div class="carousel-inner">
+    <div class="carousel-inner carousel__custom">
         <div class="carousel-item active">
             <img src="{{asset('/images/carousel/carousel-01.jpg')}}" class="carousel__img" alt="Slide 1">
         </div>
