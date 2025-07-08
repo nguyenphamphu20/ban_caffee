@@ -11,20 +11,15 @@
         width: 30px;
     }
 
-    .header &__btn {
+    &__btn {
         font-size: 1.6rem;
     }
 
-    .header &__btn {
+    &__btn {
         font-size: 1.6rem;
     }
 
     .header &__input {
         font-size: 1.6rem;
-    }
-
-    .header &__link {
-        color: var(--text-color);
-        text-underline-offset: 2px;
     }
 }

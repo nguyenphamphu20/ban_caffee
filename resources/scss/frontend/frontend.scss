@@ -1,8 +1,12 @@
 @use "tailwindcss";
 @use "bootstrap/scss/bootstrap";
-@use "../scss/main.scss";
+@use "base";
+@use "layouts";
+@use "components";
+@use "pages";
+@use "themes";
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';

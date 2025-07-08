@@ -1,6 +1,6 @@
 <div>
     <div class="home__card">
-        <img src="{{asset('images/product/'.$image)}}" alt="" class="home__img">
+        <img src="{{asset('images/frontend/product/'.$image)}}" alt="" class="home__img">
         <div class="home__title">{{$title}}</div>
         <div class="home__desc">
             <div>{{$desc}}</div>

@@ -1,16 +1,16 @@
-@extends("layouts.master");
+@extends("frontend.layouts.master");
 @section("title","Home")
 @section("content")
 <main>
     <section class="carousel">
         <div class="container">
-            @include("partials.carousel")
+            @include("frontend.layouts.carousel")
         </div>
     </section>
 
     <section class="category">
         <div class="container">
-            @include("partials.category")
+            @include("frontend.layouts.category")
         </div>
     </section>
     <section class="home">

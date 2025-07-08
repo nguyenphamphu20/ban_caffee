@@ -1,0 +1,57 @@
+.footer {
+    background-color: var(--footer-background);
+
+    ul,
+    li {
+        padding: 0;
+        list-style: none;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.45;
+
+        &--image {
+            display: flex;
+            gap: 12px;
+        }
+    }
+
+    &__img {
+        width: 24px;
+    }
+
+    &__item,
+    &__desc {
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.47;
+    }
+
+    &__item {
+        margin-top: 0.5rem;
+    }
+
+    &__subtitle {
+        font-size: 1rem;
+    }
+
+    &__map {
+        margin-top: 2rem;
+        width: 300px;
+        border-radius: 20px;
+    }
+
+    &__hr {
+        background-color: var(--footer-hr-color);
+        display: block;
+        height: 1px;
+    }
+
+    .footer &__input {
+        font-size: 1.6rem;
+    }
+}
