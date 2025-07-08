@@ -21,7 +21,7 @@ class ProductsServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::composer("partials.header", function ($view) {
+        View::composer("frontend.layouts.header", function ($view) {
             $listOfCoffee = Products::where("danh_muc_id", 1)->limit(5)->get();
             $listOfTea = Products::where("danh_muc_id", 2)->limit(5)->get();
 
@@ -31,7 +31,7 @@ class ProductsServiceProvider extends ServiceProvider
             ]);
         });
 
-        View::composer("frontend.home", function ($view) {
+        View::composer("frontend.pages.home", function ($view) {
             $listOfProducts = Products::all();
 
             $view->with("listOfProducts", $listOfProducts);

@@ -9,7 +9,7 @@ class CommonController extends Controller
 {
     public function home()
     {
-        return view("frontend.home");
+        return view("frontend.pages.home");
     }
 
     public function theme(Request $request)

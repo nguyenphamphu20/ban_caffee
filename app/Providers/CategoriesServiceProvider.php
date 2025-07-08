@@ -21,12 +21,12 @@ class CategoriesServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::composer("partials.header", function ($view) {
+        View::composer("frontend.layouts.header", function ($view) {
             $categories = Categories::all();
             $view->with("categories", $categories);
         });
 
-        View::composer("partials.category", function ($view) {
+        View::composer("frontend.layouts.category", function ($view) {
             $categories = Categories::all();
             $view->with("categories", $categories);
         });
