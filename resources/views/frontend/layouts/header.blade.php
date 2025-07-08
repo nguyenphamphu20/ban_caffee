@@ -1,19 +1,21 @@
 <div class="container">
     <div class="header__main">
-        <div class="logo">
-            @if (session("theme")==="dark")
-            <img src="{{asset('./images/logo/logo_dark.svg')}}" alt="Logo" class="logo__img">
-            @else
-            <img src="{{asset('./images/logo/logo.svg')}}" alt="Logo" class="logo__img">
-            @endif
-            <div class="logo__title">Tisu Home</div>
-        </div>
+        <a href="{{route('home')}}">
+            <div class="logo">
+                @if (session("theme")==="dark")
+                <img src="{{asset('images/frontend/logo/logo_dark.svg')}}" alt="Logo" class="logo__img">
+                @else
+                <img src="{{asset('images/frontend/logo/logo.svg')}}" alt="Logo" class="logo__img">
+                @endif
+                <div class="logo__title">Tisu Home</div>
+            </div>
+        </a>
 
         {{-- begin navbar --}}
-        <nav class="navbar gap-5 navbar-expand-lg navbar__custom" data-bs-theme="{{session('theme','light')}}">
+        <nav class="navbar navbar-expand-lg navbar__custom" data-bs-theme="{{session('theme','light')}}">
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 gap-xl-3 gap-lg-1 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle navbar__item" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -25,7 +27,8 @@
                             <li>
                                 <a class="dropdown-item py-2 dropdown-item__custom d-flex gap-4 align-items-center navbar__link"
                                     href="#">
-                                    <img class="navbar__icon" src="{{asset('./images/category/'.$category->hinh)}}"
+                                    <img class="navbar__icon"
+                                        src="{{asset('images/frontend/category/'.$category->hinh)}}"
                                         alt="{{$category->ten_danh_muc}}">
                                     {{$category->ten_danh_muc}}
                                 </a>
@@ -33,11 +36,6 @@
                             @endforeach
                         </ul>
                     </li>
-                </ul>
-            </div>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle navbar__item" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -55,11 +53,7 @@
                             @endforeach
                         </ul>
                     </li>
-                </ul>
-            </div>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle navbar__item" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -77,6 +71,14 @@
                             @endforeach
                         </ul>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link navbar__item" href="#">Giới thiệu</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link navbar__item" href="#">Nhân viên</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -87,7 +89,7 @@
                 <input class="form-control me-2 header__input" type="search" placeholder="Bạn tìm gì thế"
                     aria-label="Search" />
                 <button class="btn btn-{{session('theme','light') === 'light' ? 'dark' : 'light' }} header__btn"
-                    type="submit"><img src="{{asset('./images/navbar/search.svg')}}" alt="Search"
+                    type="submit"><img src="{{asset('images/frontend/navbar/search.svg')}}" alt="Search"
                         class="icon-other"></button>
             </form>
             <a href="#" class="header__link">Login</a> |
@@ -97,9 +99,9 @@
                 <input type="hidden" name="theme" value="{{session('theme','light')}}">
                 <button type="submit" class="btn">
                     @if (session("theme")==="dark")
-                    <img class="header__img" src="{{asset('./images/themes/icon_dark.svg')}}" alt="">
+                    <img class="header__img" src="{{asset('images/frontend/themes/icon_dark.svg')}}" alt="">
                     @else
-                    <img class="header__img" src="{{asset('./images/themes/icon.svg')}}" alt="">
+                    <img class="header__img" src="{{asset('images/frontend/themes/icon.svg')}}" alt="">
                     @endif
                 </button>
 

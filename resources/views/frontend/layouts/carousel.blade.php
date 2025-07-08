@@ -11,19 +11,19 @@
     <!-- Slides -->
     <div class="carousel-inner carousel__custom">
         <div class="carousel-item active">
-            <img src="{{asset('/images/carousel/carousel-01.jpg')}}" class="carousel__img" alt="Slide 1">
+            <img src="{{asset('images/frontend/carousel/carousel-01.jpg')}}" class="carousel__img" alt="Slide 1">
         </div>
         <div class="carousel-item">
-            <img src="{{asset('/images/carousel/carousel-02.jpg')}}" class="carousel__img" alt="Slide 2">
+            <img src="{{asset('images/frontend/carousel/carousel-02.jpg')}}" class="carousel__img" alt="Slide 2">
         </div>
         <div class="carousel-item">
-            <img src="{{asset('/images/carousel/carousel-03.jpg')}}" class="carousel__img" alt="Slide 3">
+            <img src="{{asset('images/frontend/carousel/carousel-03.jpg')}}" class="carousel__img" alt="Slide 3">
         </div>
         <div class="carousel-item">
-            <img src="{{asset('/images/carousel/carousel-04.jpg')}}" class="carousel__img" alt="Slide 4">
+            <img src="{{asset('images/frontend/carousel/carousel-04.jpg')}}" class="carousel__img" alt="Slide 4">
         </div>
         <div class="carousel-item">
-            <img src="{{asset('/images/carousel/carousel-05.jpg')}}" class="carousel__img" alt="Slide 5">
+            <img src="{{asset('images/frontend/carousel/carousel-05.jpg')}}" class="carousel__img" alt="Slide 5">
         </div>
     </div>
 

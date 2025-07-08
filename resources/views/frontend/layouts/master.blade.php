@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield("title","Trang chủ")</title>
-    @vite(["resources/css/app.scss","resources/js/app.js"])
+    @vite(["resources/scss/frontend/frontend.scss","resources/js/app.js"])
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -24,7 +24,7 @@
         @include("frontend.layouts.header")
     </header>
     @yield("content")
-    <footer class="mt-5 py-5">
+    <footer class="mt-5 py-5 footer">
         @include("frontend.layouts.footer")
     </footer>
 </body>
