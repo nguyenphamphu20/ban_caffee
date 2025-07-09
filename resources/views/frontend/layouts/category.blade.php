@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col">
-        <h1 class="heading-lv-2">Danh mục yêu thích</h1>
+        <x-card-title value="<div class='title__active'>Danh mục yêu thích</div>"></x-card-title>
     </div>
 </div>
 <div class="row">

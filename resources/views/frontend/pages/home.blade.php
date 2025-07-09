@@ -16,7 +16,7 @@
     <section class="home">
         <div class="container">
             <div class="row">
-                <h1 class="heading-lv-2">Home</h1>
+                <x-card-title value="<div class='title__active'>Home</div>"></x-card-title>
             </div>
             <div class="row row-cols-4 g-4">
                 @foreach ($listOfProducts as $product )
@@ -29,9 +29,6 @@
                     </a>
                 </div>
                 @endforeach
-
-
-
             </div>
     </section>
 </main>

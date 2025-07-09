@@ -8,7 +8,7 @@
 <section class="categories">
     <div class="container">
         <div class="row">
-            <h1 class="heading-lv-2">Home > {{$nameCategory}}</h1>
+            <h2 class="heading-lv-2">Home > {{$nameCategory}}</h2>
         </div>
         <div class="row row-cols-4 g-4">
             @foreach ($listOfProducts as $product )
