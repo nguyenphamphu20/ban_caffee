@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
-use App\Models\Products;
+use App\Models\Product;
 
 class ProductsServiceProvider extends ServiceProvider
 {
@@ -22,8 +22,8 @@ class ProductsServiceProvider extends ServiceProvider
     public function boot(): void
     {
         View::composer("frontend.layouts.header", function ($view) {
-            $listOfCoffee = Products::where("danh_muc_id", 1)->limit(5)->get();
-            $listOfTea = Products::where("danh_muc_id", 2)->limit(5)->get();
+            $listOfCoffee = Product::where("danh_muc_id", 1)->limit(5)->get();
+            $listOfTea = Product::where("danh_muc_id", 2)->limit(5)->get();
 
             $view->with([
                 "listOfCoffee" => $listOfCoffee,
@@ -32,7 +32,7 @@ class ProductsServiceProvider extends ServiceProvider
         });
 
         View::composer("frontend.pages.home", function ($view) {
-            $listOfProducts = Products::all();
+            $listOfProducts = Product::all();
 
             $view->with("listOfProducts", $listOfProducts);
         });

@@ -54,4 +54,16 @@
     .footer &__input {
         font-size: 1.6rem;
     }
+
+    &__link {
+        transition: font-weight 0.2s ease;
+    }
+
+    &__link:hover {
+        font-weight: bolder;
+    }
+
+    .footer &__btn {
+        font-size: 1.6rem;
+    }
 }

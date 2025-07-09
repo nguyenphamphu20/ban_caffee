@@ -26,7 +26,7 @@
                             @foreach ($categories as $category )
                             <li>
                                 <a class="dropdown-item py-2 dropdown-item__custom d-flex gap-4 align-items-center navbar__link"
-                                    href="#">
+                                    href="{{route('category',$category->danh_muc_id)}}">
                                     <img class="navbar__icon"
                                         src="{{asset('images/frontend/category/'.$category->hinh)}}"
                                         alt="{{$category->ten_danh_muc}}">
