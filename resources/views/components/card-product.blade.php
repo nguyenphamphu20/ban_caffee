@@ -1,15 +1,15 @@
 <div>
-    <div class="home__card">
-        <img src="{{asset('images/frontend/product/'.$image)}}" alt="" class="home__img">
-        <div class="home__title">{{$title}}</div>
-        <div class="home__desc">
+    <div class="product-card">
+        <img src="{{asset('images/frontend/product/'.$image)}}" alt="" class="product-card__img">
+        <div class="product-card__title">{{$title}}</div>
+        <div class="product-card__desc">
             <div>{{$desc}}</div>
             <div>{{$taste}}</div>
         </div>
-        <div class="home__resource">{{$resource}}</div>
-        <div class="home__group">
-            <div class="home__price">{{number_format($price)}} đ</div>
-            <button class="btn btn-{{session('theme','light') === 'light' ? 'dark' : 'light' }} home__btn">Thêm
+        <div class="product-card__resource">{{$resource}}</div>
+        <div class="product-card__group">
+            <div class="product-card__price">{{number_format($price)}} đ</div>
+            <button class="btn btn-{{session('theme','light') === 'light' ? 'dark' : 'light' }} product-card__btn">Thêm
                 vào</button>
         </div>
     </div>

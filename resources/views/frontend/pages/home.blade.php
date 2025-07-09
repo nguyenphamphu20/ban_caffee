@@ -16,20 +16,19 @@
     <section class="home">
         <div class="container">
             <div class="row">
-                <h1 class="heading-lv-2">Tất cả</h1>
+                <x-card-title value="<div class='title__active'>Home</div>"></x-card-title>
             </div>
-            <div class="row row-cols-4 mt-5 g-4">
+            <div class="row row-cols-4 g-4">
                 @foreach ($listOfProducts as $product )
                 <div class="col">
-                    <x-card-product image="{{$product->hinh}}" title="{{$product->ten_san_pham}}"
-                        desc="{{$product->mo_ta}}" resource="{{$product->nguon_goc}}" price="{{$product->gia}}"
-                        taste="{{$product->huong_vi}}">
-                    </x-card-product>
+                    <a href="#">
+                        <x-card-product image="{{$product->hinh}}" title="{{$product->ten_san_pham}}"
+                            desc="{{$product->mo_ta}}" resource="{{$product->nguon_goc}}" price="{{$product->gia}}"
+                            taste="{{$product->huong_vi}}">
+                        </x-card-product>
+                    </a>
                 </div>
                 @endforeach
-
-
-
             </div>
     </section>
 </main>

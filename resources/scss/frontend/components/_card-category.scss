@@ -1,0 +1,29 @@
+.category-card {
+    border-radius: 16px;
+    background-color: var(--category-card-background);
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    &__img {
+        border-radius: 16px;
+        width: 116px;
+        height: 116px;
+        object-fit: cover;
+        background-color: var(--category-img-background);
+    }
+
+    &__price {
+        font-size: 2.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.45;
+    }
+
+    &__desc {
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+}

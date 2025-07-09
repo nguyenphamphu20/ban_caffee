@@ -1,8 +1,12 @@
 <?php
 
-use App\Http\Controllers\CommonController;
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 Route::redirect("/", "/Home");
-Route::get('/Home', [CommonController::class, "home"])->name("home");
-Route::post('/Home', [CommonController::class, "theme"])->name("home.theme");
+Route::group(["prefix" => "Home"], function () {
+    Route::get('/', [PageController::class, "indexHome"])->name("home");
+    Route::post('/', [PageController::class, "theme"])->name("home.theme");
+
+    Route::get("/{id}", [PageController::class, "indexCategory"])->name("category");
+});

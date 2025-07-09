@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col">
-        <h1 class="heading-lv-2">Danh mục yêu thích</h1>
+        <x-card-title value="<div class='title__active'>Danh mục yêu thích</div>"></x-card-title>
     </div>
 </div>
 <div class="row">
@@ -18,9 +18,11 @@
                 <div class="row row-cols-3">
                     @foreach ($chunk as $category )
                     <div class="col">
-                        <x-card-category image="{{$category->hinh}}" price="{{$category->gia}}"
-                            desc="{{$category->mo_ta}}">
-                        </x-card-category>
+                        <a href="{{route('category',$category->danh_muc_id)}}" class="category__link">
+                            <x-card-category image="{{$category->hinh}}" price="{{$category->gia}}"
+                                desc="{{$category->mo_ta}}">
+                            </x-card-category>
+                        </a>
                     </div>
                     @endforeach
                 </div>

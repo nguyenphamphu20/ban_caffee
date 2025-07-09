@@ -1,0 +1,26 @@
+.title-card {
+    position: relative;
+    background-color: var(--title-card-background);
+    padding: 20px;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--title-card-text);
+}
+
+.title-card::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    content: "";
+    display: block;
+    height: 50%;
+    width: 3px;
+    background-color: var(--text-color);
+}
+
+.title__active {
+    color: var(--text-color);
+}

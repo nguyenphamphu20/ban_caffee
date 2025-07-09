@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
-use App\Models\Categories;
+use App\Models\Category;
 
 class CategoriesServiceProvider extends ServiceProvider
 {
@@ -21,13 +21,8 @@ class CategoriesServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::composer("frontend.layouts.header", function ($view) {
-            $categories = Categories::all();
-            $view->with("categories", $categories);
-        });
-
-        View::composer("frontend.layouts.category", function ($view) {
-            $categories = Categories::all();
+        View::composer(["frontend.layouts.header", "frontend.layouts.category", "frontend.layouts.footer"], function ($view) {
+            $categories = Category::all();
             $view->with("categories", $categories);
         });
     }

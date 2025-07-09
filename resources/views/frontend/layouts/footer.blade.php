@@ -18,7 +18,7 @@
                 @csrf
                 <input class="form-control me-2 footer__input" type="search" placeholder="Địa chỉ email của bạn"
                     aria-label="Search" />
-                <button class="btn btn-{{session('theme','light') === 'light' ? 'dark' : 'light' }} header__btn"
+                <button class="btn btn-{{session('theme','light') === 'light' ? 'dark' : 'light' }} footer__btn"
                     type="submit">Gửi</button>
             </form>
         </div>
@@ -26,22 +26,20 @@
         <div class="col">
             <h4 class="footer__title">Điều khoản</h4>
             <ul class="mt-4">
-                <li class="footer__item"><a href="#"></a>Điều khoản sử dụng</li>
-                <li class="footer__item"><a href="#"></a>Chính xác bảo mật thông tin</li>
-                <li class="footer__item"><a href="#"></a>Hướng dẫn xuất hoá hơn GTGT</li>
+                <li class="footer__item"><a class="footer__link" href="#">Điều khoản sử dụng</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Chính xác bảo mật thông tin</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Hướng dẫn xuất hoá hơn GTGT</a></li>
             </ul>
         </div>
 
         <div class="col">
             <h4 class="footer__title">Menu</h4>
             <ul class="mt-4">
-                <li class="footer__item"><a href="#"></a>Cà Phê</li>
-                <li class="footer__item"><a href="#"></a>Trà</li>
-                <li class="footer__item"><a href="#"></a>Bánh Ngọt</li>
-                <li class="footer__item"><a href="#"></a>Đồ Uống Đá Xay</li>
-                <li class="footer__item"><a href="#"></a>Nước Ép</li>
-                <li class="footer__item"><a href="#"></a>Sinh Tố</li>
-                <li class="footer__item"><a href="#"></a>Đồ ăn nhẹ</li>
+                @foreach ($categories as $category )
+                <li class="footer__item"><a class="footer__link"
+                        href="{{route('category',$category->danh_muc_id)}}">{{$category->ten_danh_muc}}</a></li>
+                @endforeach
+
             </ul>
         </div>
 
