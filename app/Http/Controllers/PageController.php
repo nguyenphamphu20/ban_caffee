@@ -26,12 +26,17 @@ class PageController extends Controller
         return back();
     }
 
-    public function indexCategory($id)
+    public function indexCategory($nameCategory)
     {
-        $category = Category::find($id);
-        $nameCategory = $category->ten_danh_muc;
+        $category = Category::where("ten_danh_muc", $nameCategory)->first();
         $listOfProducts = $category->products;
 
         return view("frontend.pages.categories", compact("listOfProducts", "nameCategory"));
+    }
+
+    public function indexProduct($nameCategory, $nameProduct)
+    {
+        $product = Product::where("ten_san_pham", $nameProduct)->first();
+        return view("frontend.pages.product", compact("nameCategory", "product"));
     }
 }

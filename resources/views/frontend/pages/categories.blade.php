@@ -1,4 +1,4 @@
-@extends("frontend.layouts.master");
+@extends("frontend.layouts.master")
 @section("content")
 <section class="category mt-5 pt-5">
     <div class="container">
@@ -8,12 +8,15 @@
 <section class="categories">
     <div class="container">
         <div class="row">
-            <h2 class="heading-lv-2">Home > {{$nameCategory}}</h2>
+            <x-card-title
+                value='<a href="{{route("home")}}">Home</a> > <span class="title__active">{{$nameCategory}}</span>'>
+            </x-card-title>
         </div>
         <div class="row row-cols-4 g-4">
             @foreach ($listOfProducts as $product )
             <div class="col">
-                <a href="#">
+                <a
+                    href="{{route('product',['nameCategory' => $product->category->ten_danh_muc,'nameProduct' => $product->ten_san_pham])}}">
                     <x-card-product image="{{$product->hinh}}" title="{{$product->ten_san_pham}}"
                         desc="{{$product->mo_ta}}" resource="{{$product->nguon_goc}}" price="{{$product->gia}}"
                         taste="{{$product->huong_vi}}">

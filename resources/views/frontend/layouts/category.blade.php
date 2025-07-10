@@ -18,7 +18,8 @@
                 <div class="row row-cols-3">
                     @foreach ($chunk as $category )
                     <div class="col">
-                        <a href="{{route('category',$category->danh_muc_id)}}" class="category__link">
+                        <a href="{{route('category',['nameCategory'=> $category->ten_danh_muc])}}"
+                            class="category__link">
                             <x-card-category image="{{$category->hinh}}" price="{{$category->gia}}"
                                 desc="{{$category->mo_ta}}">
                             </x-card-category>
