@@ -37,7 +37,8 @@
             <ul class="mt-4">
                 @foreach ($categories as $category )
                 <li class="footer__item"><a class="footer__link"
-                        href="{{route('category',$category->danh_muc_id)}}">{{$category->ten_danh_muc}}</a></li>
+                        href="{{route('category',['nameCategory' => $category->ten_danh_muc])}}">{{$category->ten_danh_muc}}</a>
+                </li>
                 @endforeach
 
             </ul>

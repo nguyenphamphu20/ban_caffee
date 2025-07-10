@@ -26,7 +26,7 @@
                             @foreach ($categories as $category )
                             <li>
                                 <a class="dropdown-item py-2 dropdown-item__custom d-flex gap-4 align-items-center navbar__link"
-                                    href="{{route('category',$category->danh_muc_id)}}">
+                                    href="{{route('category',['nameCategory'=> $category->ten_danh_muc])}}">
                                     <img class="navbar__icon"
                                         src="{{asset('images/frontend/category/'.$category->hinh)}}"
                                         alt="{{$category->ten_danh_muc}}">
@@ -46,7 +46,7 @@
                             @foreach ($listOfCoffee as $coffee )
                             <li>
                                 <a class="dropdown-item py-2 dropdown-item__custom d-flex gap-4 align-items-center navbar__link"
-                                    href="#">
+                                    href="{{route('product',['nameCategory' => $coffee->category->ten_danh_muc,'nameProduct' => $coffee->ten_san_pham])}}">
                                     {{$coffee->ten_san_pham}}
                                 </a>
                             </li>
@@ -64,7 +64,7 @@
                             @foreach ($listOfTea as $tea )
                             <li>
                                 <a class="dropdown-item py-2 dropdown-item__custom d-flex gap-4 align-items-center navbar__link"
-                                    href="#">
+                                    href="{{route('product',['nameCategory' => $tea->category->ten_danh_muc,'nameProduct' => $tea->ten_san_pham])}}">
                                     {{$tea->ten_san_pham}}
                                 </a>
                             </li>
