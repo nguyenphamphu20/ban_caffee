@@ -26,29 +26,34 @@
       font-weight: bold;
       letter-spacing: 1px;
       text-shadow: 2px 2px #ffffff;
+      text-anchor: middle;
     }
     .text-sub {
       font-family: 'Courier New', monospace;
       font-size: 16px;
       fill: #4F86C6;
       letter-spacing: 4px;
+      text-anchor: middle;
     }
   </style>
 
-  <!-- Vòng tròn nền -->
+  <!-- Vòng tròn nền giữ nguyên -->
   <circle class="bg-circle" cx="150" cy="150" r="120"/>
   <circle class="circle-border" cx="150" cy="150" r="120"/>
 
-  <!-- Cốc cà phê -->
-  <ellipse class="cup" cx="150" cy="185" rx="40" ry="18"/>
-  <rect class="cup" x="110" y="140" width="80" height="45" rx="12" ry="12"/>
-  <path class="cup" d="M190 155 Q210 160 195 175" fill="none" stroke="#1E3D59" stroke-width="3"/>
+  <!-- Toàn bộ nội dung tụt xuống 30px -->
+  <g transform="translate(0, 30)">
+    <!-- Cốc cà phê -->
+    <ellipse class="cup" cx="150" cy="185" rx="40" ry="18"/>
+    <rect class="cup" x="110" y="140" width="80" height="45" rx="12" ry="12"/>
+    <path class="cup" d="M190 155 Q210 160 195 175" fill="none" stroke="#1E3D59" stroke-width="3"/>
 
-  <!-- Hơi nước -->
-  <path class="steam" d="M135 135 C130 120, 140 105, 135 90"/>
-  <path class="steam" d="M165 135 C160 120, 170 105, 165 90"/>
+    <!-- Hơi nước -->
+    <path class="steam" d="M135 135 C130 120, 140 105, 135 90"/>
+    <path class="steam" d="M165 135 C160 120, 170 105, 165 90"/>
 
-  <!-- Tên thương hiệu -->
-  <text class="text-main" x="80" y="70">Tisu</text>
-  <text class="text-sub" x="90" y="100">COFFEE &amp; TEA</text>
+    <!-- Tên thương hiệu căn giữa và nâng lên 5px -->
+    <text class="text-main" x="150" y="65">Tisu</text>
+    <text class="text-sub" x="150" y="95">COFFEE &amp; TEA</text>
+  </g>
 </svg>

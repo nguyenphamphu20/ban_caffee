@@ -30,7 +30,6 @@
                 </li>
                 <li class="footer__item"><a class="footer__link" href="{{route('security')}}">Chính sách bảo mật thông
                         tin</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">Hướng dẫn xuất hoá hơn GTGT</a></li>
             </ul>
         </div>
 

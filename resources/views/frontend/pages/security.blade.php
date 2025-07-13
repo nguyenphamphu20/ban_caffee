@@ -64,7 +64,7 @@
                     <h3 class="introduce__title">5. Biện pháp bảo mật</h3>
                     <p class="introduce__desc">
                     <ul>
-                        <li>Mã hóa dữ liệu nhạy cảm bằng giao thức<span class="introduce__bolder">SSL</span>.</li>
+                        <li>Mã hóa dữ liệu nhạy cảm bằng giao thức<span class="introduce__bolder"> SSL</span>.</li>
                         <li>Giới hạn quyền truy cập thông tin nội bộ.</li>
                         <li>Lưu trữ trên hệ thống máy chủ an toàn.</li>
                     </ul>

@@ -75,10 +75,6 @@
                     <li class="nav-item">
                         <a class="nav-link navbar__item" href="{{route('introduce')}}">Giới thiệu</a>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link navbar__item" href="#">Nhân viên</a>
-                    </li>
                 </ul>
             </div>
         </nav>

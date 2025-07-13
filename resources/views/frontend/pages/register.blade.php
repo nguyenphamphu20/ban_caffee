@@ -26,7 +26,11 @@
                 <div class="col">
                     <div class="register__gallery">
                         <div class="register__img">
+                            @if (session("theme")==="dark")
+                            <img src="{{asset('images/frontend/logo/logo_dark.svg')}}" alt="Logo">
+                            @else
                             <img src="{{asset('images/frontend/logo/logo.svg')}}" alt="Logo">
+                            @endif
                         </div>
                         <div class="register__subtitle text-center">"Quán cà phê đặc sản - rang xay nguyên chất, phin
                             truyền thống
