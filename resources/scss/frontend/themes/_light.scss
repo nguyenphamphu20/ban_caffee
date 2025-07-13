@@ -18,6 +18,10 @@ html.light {
             saturate(2566%) hue-rotate(182deg) brightness(116%) contrast(96%);
     }
 
+    .web {
+        color: blue !important;
+    }
+
     --category-card-background: #eee;
     --category-img-background: #fff;
 
@@ -39,4 +43,15 @@ html.light {
     --product-content-background: #f6f6f6;
 
     --product-link: #fff;
+
+    --register-gallery: #fafafd;
+
+    --register-content: #ffffff;
+
+    --register-input-text: #d2d1d6;
+
+    --register-input-border: #d2d1d6;
+
+    --register-icon: brightness(0) saturate(100%) invert(73%) sepia(10%)
+        saturate(237%) hue-rotate(206deg) brightness(87%) contrast(82%);
 }

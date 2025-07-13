@@ -12,7 +12,7 @@
                 </div>
             </a>
             <div class="footer__info mt-5">"Quán cà phê đặc sản - rang xay nguyên chất, phin truyền thống đậm vị, bánh
-                homemade thơm ngon</div>
+                homemade thơm ngon"</div>
             <p class="footer__subtitle mt-5">Nhập địa chỉ email của bạn để nhận được nhiều ưu đãi</p>
             <form class="d-flex" role="search">
                 @csrf
@@ -26,9 +26,10 @@
         <div class="col">
             <h4 class="footer__title">Điều khoản</h4>
             <ul class="mt-4">
-                <li class="footer__item"><a class="footer__link" href="#">Điều khoản sử dụng</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">Chính xác bảo mật thông tin</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">Hướng dẫn xuất hoá hơn GTGT</a></li>
+                <li class="footer__item"><a class="footer__link" href="{{route('termsOfUse')}}">Điều khoản sử dụng</a>
+                </li>
+                <li class="footer__item"><a class="footer__link" href="{{route('security')}}">Chính sách bảo mật thông
+                        tin</a></li>
             </ul>
         </div>
 

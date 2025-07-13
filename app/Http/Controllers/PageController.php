@@ -39,4 +39,31 @@ class PageController extends Controller
         $product = Product::where("ten_san_pham", $nameProduct)->first();
         return view("frontend.pages.product", compact("nameCategory", "product"));
     }
+
+    public function indexRegister()
+    {
+        return view("frontend.pages.register");
+    }
+
+    public function indexLogin()
+    {
+        return view("frontend.pages.login");
+    }
+
+    // Các đường dẫn nhỏ
+
+    public function indexIntroduce()
+    {
+        return view("frontend.pages.introduce");
+    }
+
+    public function indexTermsOfUse()
+    {
+        return view("frontend.pages.termsOfUse");
+    }
+
+    public function indexSecurity()
+    {
+        return view("frontend.pages.security");
+    }
 }
