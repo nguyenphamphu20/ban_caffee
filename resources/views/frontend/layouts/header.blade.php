@@ -73,7 +73,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link navbar__item" href="#">Giới thiệu</a>
+                        <a class="nav-link navbar__item" href="{{route('introduce')}}">Giới thiệu</a>
                     </li>
 
                     <li class="nav-item">
@@ -92,8 +92,8 @@
                     type="submit"><img src="{{asset('images/frontend/navbar/search.svg')}}" alt="Search"
                         class="icon-other"></button>
             </form>
-            <a href="#" class="header__link">Login</a> |
-            <a href="#" class="header__link">Register</a>
+            <a href="{{route('login')}}" class="header__link">Login</a> |
+            <a href="{{route('register')}}" class="header__link">Register</a>
             <form action="{{route('home.theme')}}" method="post">
                 @csrf
                 <input type="hidden" name="theme" value="{{session('theme','light')}}">

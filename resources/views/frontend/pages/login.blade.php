@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký</title>
+    <title>Đăng nhập</title>
     @vite(["resources/scss/frontend/frontend.scss","resources/js/app.js"])
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,9 +51,9 @@
                             </a>
                         </div>
 
-                        <h2 class="register__heading text-center">Đăng ký</h2>
-                        <p class="register__desc text-center">Hãy tạo tài khoản và mua sắm để hưởng những ưu đãi cực sốc
-                        </p>
+                        <h2 class="register__heading text-center">Rất vui khi được gặp bạn lần nữa</h2>
+                        <p class="register__desc">Chào mừng bạn quay lại đăng nhập. Là khách hàng quay lại, bạn có thể
+                            truy cập vào tất cả thông tin đã lưu trước đó.</p>
 
                         <form action="get" class="register__form">
                             @csrf
@@ -68,20 +68,12 @@
                                 <img src="{{asset('images/frontend/register/lock.svg')}}" alt=""
                                     class="register__input-img">
                             </div>
-
-                            <div class="register__group">
-                                <input type="password" class="register__input position-relative"
-                                    placeholder="Confirm Password">
-                                <img src="{{asset('images/frontend/register/lock.svg')}}" alt=""
-                                    class="register__input-img">
-                            </div>
                             <a href="#"
                                 class="btn btn-{{session('theme','light') === 'light' ? 'dark' : 'light' }} register__btn ">
                                 Đăng ký</a>
                         </form>
-                        <p class="text-center">Bạn đã có một tài khoản ? <a href="{{route('login')}}"
-                                class="register__link">Đăng
-                                nhập</a>
+                        <p class="text-center">Bạn chưa có tài khoản ? <a href="{{route('register')}}"
+                                class="register__link">Đăng ký</a>
                         </p>
                     </div>
                 </div>

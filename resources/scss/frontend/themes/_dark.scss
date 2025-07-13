@@ -18,6 +18,10 @@ html.dark {
             saturate(2263%) hue-rotate(235deg) brightness(98%) contrast(90%);
     }
 
+    .web {
+        color: rgb(253, 194, 66) !important;
+    }
+
     --category-card-background: #171c28;
     --category-img-background: #292e39;
 
@@ -37,4 +41,15 @@ html.dark {
     --product-content-background: #171c28;
 
     --product-link: #1a162e;
+
+    --register-gallery: #171c28;
+
+    --register-content: #292e39;
+
+    --register-input-text: #b9babe;
+
+    --register-input-border: #b9babe;
+
+    --register-icon: brightness(0) saturate(100%) invert(85%) sepia(9%)
+        saturate(81%) hue-rotate(190deg) brightness(86%) contrast(94%);
 }
