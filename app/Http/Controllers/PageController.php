@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Customer;
 use App\Models\Product;
-use App\Models\User;
+
 
 class PageController extends Controller
 
@@ -40,15 +44,6 @@ class PageController extends Controller
         return view("frontend.pages.product", compact("nameCategory", "product"));
     }
 
-    public function indexRegister()
-    {
-        return view("frontend.pages.register");
-    }
-
-    public function indexLogin()
-    {
-        return view("frontend.pages.login");
-    }
 
     // Các đường dẫn nhỏ
 

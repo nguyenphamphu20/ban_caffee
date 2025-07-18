@@ -17,11 +17,12 @@ class DatabaseSeeder extends Seeder
             CustomerSeeder::class,
             OrderSeeder::class,
             CategorySeeder::class,
+            SupplierSeeder::class,
             ProductSeeder::class,
             OrderDetailSeeder::class,
             InventorySeeder::class,
             StaffSeeder::class,
-            SupplierSeeder::class
+            BankCardSeeder::class
         ]);
     }
 }

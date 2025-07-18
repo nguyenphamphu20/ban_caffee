@@ -13,6 +13,6 @@ class Inventory extends Model
 
     public function products()
     {
-        return $this->hasMany(OrderDetail::class, "san_pham_id");
+        return $this->belongsTo(OrderDetail::class, "san_pham_id");
     }
 }

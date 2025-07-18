@@ -15,7 +15,9 @@ return new class extends Migration
             Schema::create("ton_khos", function (Blueprint $table) {
                 $table->id("ton_kho_id");
                 $table->unsignedBigInteger("san_pham_id");
-                $table->unsignedInteger("so_luong_con_lai");
+                $table->integer("so_luong_con_lai");
+
+                $table->foreign("san_pham_id")->references("san_pham_id")->on("san_phams");
             });
         }
     }

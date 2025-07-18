@@ -1,0 +1,60 @@
+.wallet {
+    padding: 30px;
+    background-color: var(--customer-info);
+    border-radius: 20px;
+
+    &__desc {
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.46;
+    }
+
+    &__add {
+        min-height: 171px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        border: 2px dashed var(--wallet-border-add);
+    }
+
+    &__add-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+
+    &__add-img {
+        width: 20px;
+        filter: var(--wallet-add);
+    }
+
+    &__add-desc {
+        color: var(--wallet-border-add);
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.42;
+    }
+
+    // info
+
+    &__main {
+        display: flex;
+        border-radius: 10px;
+        align-items: center;
+        gap: 10px;
+        background-color: var(--wallet-info-background);
+        padding: 10px;
+    }
+
+    &__info-icon {
+        padding: 15px;
+        border-radius: 8px;
+        background: var(--wallet-icon-background);
+    }
+}

@@ -1,28 +1,11 @@
-<!DOCTYPE html>
-<html lang="vi" class="{{session('theme','light')}}">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký</title>
-    @vite(["resources/scss/frontend/frontend.scss","resources/js/app.js"])
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="icon" type="image/png" href="{{asset('favicon/favicon-96x96.png')}}" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="{{asset('favicon.svg')}}" sizes="any" />
-    <link rel="shortcut icon" href="{{asset('favicon/favicon.ico')}}" />
-    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('favicon/apple-touch-icon.png')}}" />
-    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
-    <link rel="manifest" href="{{asset('favicon/site.webmanifest')}}" />
-</head>
+@extends("frontend.layouts.master");
+@section("title","Đăng ký")
+@section("content")
 
 <body>
     <section class="register">
         <div class="container-fluid">
-            <div class="row row-cols-2 algin-items-center register__row">
+            <div class="row row-cols-2 algin-items-center register__row g-0">
                 <div class="col">
                     <div class="register__gallery">
                         <div class="register__img">
@@ -41,48 +24,56 @@
 
                 <div class="col">
                     <div class="register__content">
-                        <div class="register__logo">
-                            <a href="{{route('home')}}">
-                                <div class="logo justify-content-center">
-                                    @if (session("theme")==="dark")
-                                    <img src="{{asset('images/frontend/logo/logo_dark.svg')}}" alt="Logo"
-                                        class="logo__img">
-                                    @else
-                                    <img src="{{asset('images/frontend/logo/logo.svg')}}" alt="Logo" class="logo__img">
-                                    @endif
-                                    <div class="logo__title">Tisu Home</div>
-                                </div>
-                            </a>
-                        </div>
-
                         <h2 class="register__heading text-center">Đăng ký</h2>
                         <p class="register__desc text-center">Hãy tạo tài khoản và mua sắm để hưởng những ưu đãi cực sốc
                         </p>
 
-                        <form action="get" class="register__form">
+
+                        <form action="{{route('register')}}" method="post" class="register__form">
                             @csrf
                             <div class="register__group">
-                                <input type="email" class="register__input position-relative" placeholder="Email">
+                                <input type="text" class="register__input position-relative" placeholder="Tên"
+                                    name="name">
+                                <img src="{{asset('images/frontend/register/mail.svg')}}" alt=""
+                                    class="register__input-img ">
+                            </div>
+                            <div class="register__group">
+                                <input type="text" class="register__input position-relative" placeholder="Email"
+                                    name="email">
                                 <img src="{{asset('images/frontend/register/mail.svg')}}" alt=""
                                     class="register__input-img ">
                             </div>
 
                             <div class="register__group">
-                                <input type="password" class="register__input position-relative" placeholder="Password">
+                                <input type="password" class="register__input position-relative" placeholder="Password"
+                                    name="password">
                                 <img src="{{asset('images/frontend/register/lock.svg')}}" alt=""
                                     class="register__input-img">
                             </div>
 
                             <div class="register__group">
                                 <input type="password" class="register__input position-relative"
-                                    placeholder="Confirm Password">
+                                    placeholder="Confirm Password" name="password_confirmation">
                                 <img src="{{asset('images/frontend/register/lock.svg')}}" alt=""
                                     class="register__input-img">
                             </div>
-                            <a href="#"
+                            <button type="submit"
                                 class="btn btn-{{session('theme','light') === 'light' ? 'dark' : 'light' }} register__btn ">
-                                Đăng ký</a>
+                                Đăng ký</button>
+
+                            @if ($errors->any())
+                            <ul class="ps-0">
+                                @foreach ($errors-> all() as $error )
+                                <li>
+                                    <x-alert-component type="danger" content="{{$error}}"></x-alert-component>
+                                </li>
+                                @endforeach
+                            </ul>
+                            @elseif (session("notify"))
+                            <x-alert-component type="success" content="{{session('notify')}}"></x-alert-component>
+                            @endif
                         </form>
+
                         <p class="text-center">Bạn đã có một tài khoản ? <a href="{{route('login')}}"
                                 class="register__link">Đăng
                                 nhập</a>
@@ -92,6 +83,4 @@
             </div>
         </div>
     </section>
-</body>
-
-</html>
+    @endsection

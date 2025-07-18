@@ -16,9 +16,14 @@ return new class extends Migration
                     $table->id("khach_hang_id");
                     $table->string("ten_khach_hang", 100);
                     $table->string("email")->unique();
-                    $table->string("sdt", 100);
-                    $table->enum("level", ["Đồng", "Bạc", "Vàng"]);
-                    $table->unsignedInteger("diem");
+                    $table->string("password");
+                    $table->rememberToken();
+                    $table->string("dia_chi", 100)->default("Chưa rõ");
+                    $table->string("sdt", 100)->default("Chưa rõ");
+                    $table->enum("level", ["Đồng", "Bạc", "Vàng"])->default("Đồng");
+                    $table->unsignedInteger("diem")->default(0);
+                    $table->string("hinh")->default("avatar.jpg");
+                    $table->timestamps();
                 });
             }
         }

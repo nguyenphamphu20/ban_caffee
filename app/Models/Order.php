@@ -8,8 +8,7 @@ class Order extends Model
 {
     protected $table = "don_hangs";
     protected $primaryKey = "don_hang_id";
-    protected $fillable = ["don_hang_id", "khach_hang_id", "thoi_gian", "tong_tien", "trang_thai", "phuong_thuc_thanh_toan", "ghi_chu"];
-    public $timestamps = false;
+    protected $fillable = ["don_hang_id", "khach_hang_id", "tong_tien", "trang_thai", "phuong_thuc_thanh_toan", "ghi_chu"];
 
     public function customer()
     {

@@ -10,4 +10,10 @@ class Supplier extends Model
     protected $primaryKey = "cung_cap_id";
     protected $fillable = ["cung_cap_id", "ten_cung_cap", "nguoi_lien_he", "email", "sdt", "dia_chi"];
     public $timestamps = false;
+
+
+    public function products()
+    {
+        return $this->hasMany(Product::class, "cung_cap_id");
+    }
 }

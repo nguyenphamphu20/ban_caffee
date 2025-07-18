@@ -79,7 +79,7 @@
             </div>
         </nav>
 
-        <div class="header__group d-flex justify-contents-center align-items-center gap-4">
+        <div class="d-flex justify-contents-center align-items-center gap-4">
             <form class="d-flex" role="search">
                 @csrf
                 <input class="form-control me-2 header__input" type="search" placeholder="Bạn tìm gì thế"
@@ -88,8 +88,26 @@
                     type="submit"><img src="{{asset('images/frontend/navbar/search.svg')}}" alt="Search"
                         class="icon-other"></button>
             </form>
-            <a href="{{route('login')}}" class="header__link">Login</a> |
-            <a href="{{route('register')}}" class="header__link">Register</a>
+            @if (Auth::guard("customer") -> check() === true)
+            <div class="dropdown-center">
+                <a class="header__user dropdown-toggle no-arrow" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="header__user-img" src="{{asset('images/frontend/user/avatar.jpg')}}" alt="">
+                </a>
+
+                <ul
+                    class="text-center dropdown-menu dropdown-menu-{{session('theme','light')}} mt-2 p-4 dropdown-menu__custom">
+                    <li><span class="dropdown-item dropdown-item__custom text-wrap">{{Auth::guard("customer")
+                            ->user()->ten_khach_hang}}</span></li>
+                    <li><a class="dropdown-item dropdown-item__custom" href="{{route('customer.index')}}">Thông tin cá
+                            nhân</a></li>
+                    <li><a class="dropdown-item dropdown-item__custom" href="{{route('logout')}}">Đăng xuất</a></li>
+                </ul>
+            </div>
+            @else
+            <a href="{{route('login')}}" class="header__link">Đăng nhập</a> |
+            <a href="{{route('register')}}" class="header__link">Đăng ký</a>
+            @endif
             <form action="{{route('home.theme')}}" method="post">
                 @csrf
                 <input type="hidden" name="theme" value="{{session('theme','light')}}">

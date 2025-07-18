@@ -22,15 +22,16 @@
     }
 }
 
-.dropdown {
-    .dropdown &-item__custom {
+body .dropdown {
+    &-item__custom {
         font-size: 1.6rem;
         font-style: normal;
         font-weight: 500;
         line-height: 1.5;
+        /* Các thuộc tính khác */
     }
 
-    .dropdown &-menu__custom {
+    &-menu__custom {
         border-radius: 20px;
         border: none;
         box-shadow: 0px 40px 90px 20px var(--navbar-shadow);

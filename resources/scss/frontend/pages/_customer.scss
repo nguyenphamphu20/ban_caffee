@@ -1,0 +1,9 @@
+.customer {
+    color: var(--customer-text);
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+body:has(.customer) {
+    background-color: var(--customer-background) !important;
+}

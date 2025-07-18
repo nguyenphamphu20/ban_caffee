@@ -24,7 +24,7 @@
         @include("frontend.layouts.header")
     </header>
     @yield("content")
-    <footer class="mt-5 py-5 footer">
+    <footer class="py-5 footer">
         @include("frontend.layouts.footer")
     </footer>
 </body>

@@ -1,0 +1,66 @@
+@extends("frontend.layouts.master");
+@section("title","Đăng ký")
+@section("content")
+
+<section class="register">
+    <div class="container-fluid">
+        <div class="row row-cols-2 algin-items-center register__row g-0">
+            <div class="col">
+                <div class="register__gallery">
+                    <div class="register__img">
+                        @if (session("theme")==="dark")
+                        <img src="{{asset('images/frontend/logo/logo_dark.svg')}}" alt="Logo">
+                        @else
+                        <img src="{{asset('images/frontend/logo/logo.svg')}}" alt="Logo">
+                        @endif
+                    </div>
+                    <div class="register__subtitle text-center">"Quán cà phê đặc sản - rang xay nguyên chất, phin
+                        truyền thống
+                        đậm vị, bánh
+                        homemade thơm ngon"</div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="register__content">
+                    <h2 class="register__heading text-center">Rất vui khi được gặp bạn lần nữa</h2>
+                    <p class="register__desc">Chào mừng bạn quay lại đăng nhập. Là khách hàng quay lại, bạn có thể
+                        truy cập vào tất cả thông tin đã lưu trước đó.</p>
+
+                    <form action="{{route('login')}}" method="post" class="register__form">
+                        @csrf
+                        <div class="register__group">
+                            <input type="text" class="register__input position-relative" placeholder="Email"
+                                name="email">
+                            <img src="{{asset('images/frontend/register/mail.svg')}}" alt=""
+                                class="register__input-img ">
+                        </div>
+
+                        <div class="register__group">
+                            <input type="password" class="register__input position-relative" placeholder="Password"
+                                name="password">
+                            <img src="{{asset('images/frontend/register/lock.svg')}}" alt=""
+                                class="register__input-img">
+                        </div>
+                        <button type="submit"
+                            class="btn btn-{{session('theme','light') === 'light' ? 'dark' : 'light' }} register__btn ">
+                            Đăng nhập</button>
+                        @if ($errors->any())
+                        <ul class="ps-0">
+                            @foreach ($errors-> all() as $error )
+                            <li>
+                                <x-alert-component type="danger" content="{{$error}}"></x-alert-component>
+                            </li>
+                            @endforeach
+                        </ul>
+                        @endif
+                    </form>
+                    <p class="text-center">Bạn chưa có tài khoản ? <a href="{{route('register')}}"
+                            class="register__link">Đăng ký</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@endsection

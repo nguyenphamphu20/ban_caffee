@@ -22,4 +22,13 @@
     .header &__input {
         font-size: 1.6rem;
     }
+
+    &__user-img {
+        width: 38px;
+        border-radius: 8px;
+    }
+
+    .no-arrow.dropdown-toggle::after {
+        display: none !important;
+    }
 }

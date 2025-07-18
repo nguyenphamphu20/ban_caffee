@@ -16,42 +16,48 @@ class SupplierSeeder extends Seeder
     {
         $listOfSuppliers = [
             [
-                'ten_cung_cap' => 'Công Ty Cà Phê Nguyên Chất',
+                'cung_cap_id' => 1,
+                'ten_cung_cap' => 'Hồ Chí Minh, Việt Nam',
                 'nguoi_lien_he' => 'Lê Văn Tâm',
                 'email' => 'cungcapcaphe@nguyenchat.com',
                 'sdt' => '0912300001',
                 'dia_chi' => '123 Đường Cà Phê, Q.1, TP.HCM'
             ],
             [
-                'ten_cung_cap' => 'Trà & Nguyên Liệu Á Đông',
+                'cung_cap_id' => 2,
+                'ten_cung_cap' => 'Rome, Italy',
                 'nguoi_lien_he' => 'Trần Thị Mai',
                 'email' => 'tralieu@adong.com',
                 'sdt' => '0912300002',
                 'dia_chi' => '456 Đường Trà, Q.3, TP.HCM'
             ],
             [
-                'ten_cung_cap' => 'Bánh Ngọt Nhập Khẩu',
+                'cung_cap_id' => 3,
+                'ten_cung_cap' => 'Taipei, Đài Loan',
                 'nguoi_lien_he' => 'Nguyễn Hồng Nhung',
                 'email' => 'banhngot@nhapkhau.com',
                 'sdt' => '0912300003',
                 'dia_chi' => '789 Đường Bánh, Q.5, TP.HCM'
             ],
             [
-                'ten_cung_cap' => 'Nguyên Liệu Nước Ép Tươi',
+                'cung_cap_id' => 4,
+                'ten_cung_cap' => 'Tokyo, Nhật Bản',
                 'nguoi_lien_he' => 'Nguyễn Văn Giang',
                 'email' => 'nuocaptuoi@cungcap.com',
                 'sdt' => '0912300004',
                 'dia_chi' => '101 Đường Trái Cây, Q.10, TP.HCM'
             ],
             [
-                'ten_cung_cap' => 'Socola Nhập Khẩu Châu Âu',
+                'cung_cap_id' => 5,
+                'ten_cung_cap' => 'New York, Mỹ',
                 'nguoi_lien_he' => 'Trần Văn Bảo',
                 'email' => 'socola@chauau.com',
                 'sdt' => '0912300005',
                 'dia_chi' => '202 Đường Socola, Q.7, TP.HCM'
             ],
             [
-                'ten_cung_cap' => 'Bánh Mì & Đồ Ăn Nhanh',
+                'cung_cap_id' => 6,
+                'ten_cung_cap' => 'Paris, Pháp',
                 'nguoi_lien_he' => 'Lý Thị Cẩm',
                 'email' => 'banhmi@anviet.com',
                 'sdt' => '0912300006',

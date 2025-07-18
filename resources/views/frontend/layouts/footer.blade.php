@@ -14,7 +14,7 @@
             <div class="footer__info mt-5">"Quán cà phê đặc sản - rang xay nguyên chất, phin truyền thống đậm vị, bánh
                 homemade thơm ngon"</div>
             <p class="footer__subtitle mt-5">Nhập địa chỉ email của bạn để nhận được nhiều ưu đãi</p>
-            <form class="d-flex" role="search">
+            <form class="d-flex mt-3" role="search">
                 @csrf
                 <input class="form-control me-2 footer__input" type="search" placeholder="Địa chỉ email của bạn"
                     aria-label="Search" />

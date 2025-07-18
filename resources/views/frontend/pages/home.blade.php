@@ -13,7 +13,7 @@
             @include("frontend.layouts.category")
         </div>
     </section>
-    <section class="home">
+    <section class="home pb-5">
         <div class="container">
             <div class="row">
                 <x-card-title value="<span class='title__active'>Home</span>"></x-card-title>

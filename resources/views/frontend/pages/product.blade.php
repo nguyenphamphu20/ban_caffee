@@ -7,7 +7,7 @@
                 class="title__active">{{$product->ten_san_pham}}</span>'>
         </x-card-title>
         <div class="product__main">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-5">
                     <img class="product__img" src="{{asset('images/frontend/product/'.$product->hinh)}}"></img>
                 </div>
@@ -25,7 +25,7 @@
                                 <div class="product__taste"><span class="product__bolder">Hương vị:</span>
                                     {{$product->huong_vi}}</div>
                                 <div class="product__resource"><span class="product__bolder">Xuất sứ:</span>
-                                    {{$product->nguon_goc}}
+                                    {{$product->supplier->ten_cung_cap}}
                                 </div>
                             </div>
                         </div>

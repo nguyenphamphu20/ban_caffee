@@ -17,7 +17,7 @@ return new class extends Migration
                 $table->unsignedBigInteger("don_hang_id");
                 $table->unsignedBigInteger("san_pham_id");
                 $table->unsignedInteger("so_luong");
-                $table->unsignedInteger("don_gia");
+                $table->unsignedInteger("gia");
 
                 $table->foreign("don_hang_id")->references("don_hang_id")->on("don_hangs");
                 $table->foreign("san_pham_id")->references("san_pham_id")->on("san_phams");
