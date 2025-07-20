@@ -1,4 +1,4 @@
-@extends("frontend.layouts.master");
+@extends("frontend.layouts.master")
 @section("title","Đăng ký")
 @section("content")
 
@@ -45,17 +45,16 @@
                         <button type="submit"
                             class="btn btn-{{session('theme','light') === 'light' ? 'dark' : 'light' }} register__btn ">
                             Đăng nhập</button>
+
                         @if ($errors->any())
-                        <ul class="ps-0">
-                            @foreach ($errors-> all() as $error )
-                            <li>
-                                <x-alert-component type="danger" content="{{$error}}"></x-alert-component>
-                            </li>
-                            @endforeach
-                        </ul>
+                        @php
+                        $notifies = $errors->all();
+                        @endphp
+                        <x-alert-component type="danger" :notifies="$notifies">
+                        </x-alert-component>
                         @endif
                     </form>
-                    <p class="text-center">Bạn chưa có tài khoản ? <a href="{{route('register')}}"
+                    <p class=" text-center">Bạn chưa có tài khoản ? <a href="{{route('register')}}"
                             class="register__link">Đăng ký</a>
                     </p>
                 </div>

@@ -3,7 +3,7 @@
         <div class="user__card">
             <img src="{{asset('images/frontend/user/avatar.jpg')}}" alt="avatar for user" class="user__avatar">
             <h4 class="user__name">{{$user->ten_khach_hang}}</h4>
-            <p class="user__register-day">Thời gian đăng ký: {{$user->created_at}}</p>
+            <p class="user__register-day">Đăng ký: {{$user->created_at}}</p>
         </div>
         <img src="{{asset('images/frontend/user/background.jpg')}}" alt="Background" class="user__background">
     </div>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BankController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\PageController;
 use App\Models\Customer;
@@ -13,7 +14,7 @@ Route::group(["prefix" => "Home", "middleware" => ["checkLogin"]], function () {
     Route::get("/introduce.html", [PageController::class, "indexIntroduce"])->name("introduce");
     Route::get("/termsOfUse.html", [PageController::class, "indexTermsOfUse"])->name("termsOfUse");
     Route::get("/security.html", [PageController::class, "indexSecurity"])->name("security");
-    Route::get("/customer.html", [CustomerController::class, "indexCustomer"])->name("customer.index");
+    Route::resource("/customer", BankController::class)->names("bank");
 
     Route::get("/{nameCategory}.html", [PageController::class, "indexCategory"])->name("category");
     Route::get("/{nameCategory}/{nameProduct}.html", [PageController::class, "indexProduct"])->name("product");

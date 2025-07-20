@@ -10,12 +10,4 @@ use App\Models\Category;
 use App\Models\Customer;
 use App\Models\Product;
 
-class CustomerController extends Controller
-{
-    public function indexCustomer()
-    {
-        $user = Auth::guard("customer")->user();
-
-        return view("frontend.pages.customer.index", compact("user"));
-    }
-}
+class CustomerController extends Controller {}

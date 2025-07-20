@@ -1,7 +1,38 @@
-.wallet {
+body .wallet {
     padding: 30px;
     background-color: var(--customer-info);
     border-radius: 20px;
+
+    &__card {
+        position: relative;
+    }
+
+    &__card &__control {
+        display: flex;
+    }
+
+    &__control {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($color: #fff, $alpha: 0.6);
+
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    &__link {
+        font-size: 1.4rem;
+        color: #fff !important;
+    }
 
     &__desc {
         font-size: 1.5rem;
@@ -57,4 +88,9 @@
         border-radius: 8px;
         background: var(--wallet-icon-background);
     }
+}
+
+.wallet__card:hover .wallet__control {
+    opacity: 1;
+    visibility: visible;
 }

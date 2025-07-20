@@ -19,7 +19,7 @@ class AuthController extends Controller
 
     public function register(Request $request)
     {
-        $validate = $request->validate([
+        $request->validate([
             "name" => "required",
             "email" => "required|email|unique:khach_hangs,email",
             "password" => "required|confirmed|min:8"
@@ -33,14 +33,19 @@ class AuthController extends Controller
             "password.confirmed" => "Mật khẩu không khớp"
         ]);
 
-        Customer::create([
-            "ten_khach_hang" => $validate["name"],
-            "email" => $validate["email"],
-            "password" => Hash::make($validate["password"])
+        $user = Customer::create([
+            "ten_khach_hang" => $request->input("name"),
+            "email" => $request->input("email"),
+            "password" => Hash::make($request->input("password"))
         ]);
 
 
-        return redirect()->route("register")->with("notify", "Đã đăng ký thành công");
+        Auth::guard("customer")->login($user);
+
+        return redirect()->route("home")->with([
+            "notify" => "Đăng ký thành công",
+            "status" => "success"
+        ]);
     }
 
     public function indexLogin()
@@ -63,7 +68,10 @@ class AuthController extends Controller
         $credentials = $request->only("email", "password");
         if (Auth::guard('customer')->attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended(route('home'));
+            return redirect()->intended(route('home'))->with([
+                "notify" => "Đăng nhập thành công",
+                "status" => "success"
+            ]);
         } else {
             return back()->withErrors(["error" => "Sai email hoặc mật khẩu"]);
         }

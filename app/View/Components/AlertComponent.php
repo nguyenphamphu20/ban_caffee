@@ -8,12 +8,12 @@ use Illuminate\View\Component;
 
 class AlertComponent extends Component
 {
+    public $notifies;
     public $type;
-    public $content;
-    public function __construct($type = "", $content = "")
+    public function __construct($type = "", $notifies = [])
     {
         $this->type = $type;
-        $this->content = $content;
+        $this->notifies = $notifies;
     }
 
     /**

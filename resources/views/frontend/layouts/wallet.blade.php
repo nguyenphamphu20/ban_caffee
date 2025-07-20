@@ -3,7 +3,7 @@
         Ví của tôi
     </h2>
     <p class="wallet__desc">Phương thức thanh toán</p>
-    <div class="row row-cols-3 mt-5">
+    <div class="row row-cols-3 mt-5 align-items-center g-3">
         @php
         $banks = $user->banks;
         @endphp
@@ -11,14 +11,25 @@
         @if(!empty($banks))
         @foreach ($banks as $bank)
         <div class="col">
-            <x-bank-component name="{{$bank->ten_chu_the}}" nameBank="{{$bank->ten_ngan_hang}}"
-                numberBank="{{$bank->so_the}}" expired="{{$bank->thang.'/'.$bank->nam}}">
-            </x-bank-component>
+            <div class="wallet__card">
+                <x-bank-component name="{{$bank->ten_chu_the}}" nameBank="{{$bank->ten_ngan_hang}}"
+                    numberBank="{{$bank->so_the}}" expired="{{$bank->thang.'/'.$bank->nam}}">
+                </x-bank-component>
+                <div class="wallet__control">
+                    <a href="{{route('bank.edit',$bank->the_id)}}" class="wallet__link btn btn-warning">Sửa</a>
+                    <form action="{{route('bank.destroy',$bank->the_id)}}" method="post" style="display: inline">
+                        @csrf @method('DELETE')
+                        <button onclick="return confirm('Bạn chắc chắn xoá chứ')"
+                            class="wallet__link btn btn-danger">Xoá</button>
+                    </form>
+
+                </div>
+            </div>
         </div>
         @endforeach
         @endif
         <div class="col">
-            <a href="" class="wallet__add">
+            <a href="{{route('bank.create')}}" class="wallet__add">
                 <div class="wallet__add-btn">
                     <img src="{{asset('images/frontend/user/add.svg')}}" class="wallet__add-img" alt="add">
                     <div class="wallet__add-desc">Thêm thẻ mới</div>

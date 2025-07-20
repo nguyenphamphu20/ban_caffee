@@ -99,7 +99,7 @@
                     class="text-center dropdown-menu dropdown-menu-{{session('theme','light')}} mt-2 p-4 dropdown-menu__custom">
                     <li><span class="dropdown-item dropdown-item__custom text-wrap">{{Auth::guard("customer")
                             ->user()->ten_khach_hang}}</span></li>
-                    <li><a class="dropdown-item dropdown-item__custom" href="{{route('customer.index')}}">Thông tin cá
+                    <li><a class="dropdown-item dropdown-item__custom" href="{{route('bank.index')}}">Thông tin cá
                             nhân</a></li>
                     <li><a class="dropdown-item dropdown-item__custom" href="{{route('logout')}}">Đăng xuất</a></li>
                 </ul>

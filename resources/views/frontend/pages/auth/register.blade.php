@@ -1,4 +1,4 @@
-@extends("frontend.layouts.master");
+@extends("frontend.layouts.master")
 @section("title","Đăng ký")
 @section("content")
 
@@ -62,15 +62,11 @@
                                 Đăng ký</button>
 
                             @if ($errors->any())
-                            <ul class="ps-0">
-                                @foreach ($errors-> all() as $error )
-                                <li>
-                                    <x-alert-component type="danger" content="{{$error}}"></x-alert-component>
-                                </li>
-                                @endforeach
-                            </ul>
-                            @elseif (session("notify"))
-                            <x-alert-component type="success" content="{{session('notify')}}"></x-alert-component>
+                            @php
+                            $notifies = $errors->all();
+                            @endphp
+                            <x-alert-component type="danger" :notifies="$notifies">
+                            </x-alert-component>
                             @endif
                         </form>
 

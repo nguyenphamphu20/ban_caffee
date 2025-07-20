@@ -20,6 +20,10 @@
 </head>
 
 <body>
+    @if (session('notify'))
+    <x-alert-component :type="session('status')" :notifies="session('notify')">
+    </x-alert-component>
+    @endif
     <header class="header py-3 fixed-top">
         @include("frontend.layouts.header")
     </header>
@@ -27,6 +31,31 @@
     <footer class="py-5 footer">
         @include("frontend.layouts.footer")
     </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    if (typeof bootstrap !== 'undefined') {
+        const toastElList = document.querySelectorAll('.toast');
+        
+        toastElList.forEach(function(toastEl) {
+            const toast = new bootstrap.Toast(toastEl, {
+                autohide: true,
+                delay: 2000
+            });
+            
+            toast.show();
+            
+            toastEl.addEventListener('hidden.bs.toast', function() {
+                toastEl.remove();
+            });
+        });
+    } else {
+        console.error('Bootstrap JS chưa được tải. Vui lòng kiểm tra lại.');
+    }
+});
+    </script>
+
 </body>
 
 </html>
