@@ -92,7 +92,9 @@
             <div class="dropdown-center">
                 <a class="header__user dropdown-toggle no-arrow" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    <img class="header__user-img" src="{{asset('images/frontend/user/avatar.jpg')}}" alt="">
+                    <img class="header__user-img"
+                        src="{{ !empty($user->hinh) ? asset('images/frontend/user/'.$user->hinh) : asset('images/frontend/user/avatar.jpg')}}"
+                        alt="">
                 </a>
 
                 <ul

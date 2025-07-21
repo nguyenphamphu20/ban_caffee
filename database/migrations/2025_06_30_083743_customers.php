@@ -18,11 +18,11 @@ return new class extends Migration
                     $table->string("email")->unique();
                     $table->string("password");
                     $table->rememberToken();
-                    $table->string("dia_chi", 100)->default("Chưa rõ");
-                    $table->string("sdt", 100)->default("Chưa rõ");
+                    $table->string("dia_chi", 100)->nullable();
+                    $table->string("sdt", 100)->nullable();
                     $table->enum("level", ["Đồng", "Bạc", "Vàng"])->default("Đồng");
                     $table->unsignedInteger("diem")->default(0);
-                    $table->string("hinh")->default("avatar.jpg");
+                    $table->string("hinh")->nullable();
                     $table->timestamps();
                 });
             }

@@ -26,9 +26,9 @@
                         @endif
                         <div class="row">
                             <div class="col">
-                                <label class="bank__label" for="bank__name"> Họ và tên
-                                    <input id="bank__name" type="text" name="name" class="bank__input"
-                                        value="{{ isset($bankUpdate) ? $bankUpdate->ten_chu_the : ''}}">
+                                <label class="bank__label" for="name"> Họ và tên
+                                    <input id="name" type="text" name="name" class="bank__input"
+                                        value="{{ isset($bankUpdate) ? $bankUpdate->ten_chu_the : old('name')}}">
                                 </label>
                             </div>`
                         </div>
@@ -91,19 +91,19 @@
                             <div class="col-lg-8">
                                 <label class="bank__label" for="bank__number">Số thẻ
                                     <input type="text" class="bank__input" id="bank__number" name="bank_number"
-                                        value="{{isset($bankUpdate) ? $bankUpdate->so_the :''}}">
+                                        value="{{isset($bankUpdate) ? $bankUpdate->so_the :old('bank_number')}}">
                                 </label>
                             </div>
                             <div class="col-lg-2">
                                 <label class="bank__label" for="bank__month">Tháng
-                                    <input type="number" class="bank__input" id="bank__month" name="month"
-                                        value="{{ isset($bankUpdate) ? $bankUpdate->thang:''}}">
+                                    <input type="text" class="bank__input" id="bank__month" name="month"
+                                        value="{{ isset($bankUpdate) ? $bankUpdate->thang:old('month')}}">
                                 </label>
                             </div>
                             <div class="col-lg-2">
                                 <label class="bank__label" for="bank__year">Năm
-                                    <input type="number" class="bank__input" id="bank__year" name="year"
-                                        value="{{ isset($bankUpdate) ? $bankUpdate->nam :''}}">
+                                    <input type="text" class="bank__input" id="bank__year" name="year"
+                                        value="{{ isset($bankUpdate) ? $bankUpdate->nam :old('year')}}">
                                 </label>
                             </div>
                         </div>

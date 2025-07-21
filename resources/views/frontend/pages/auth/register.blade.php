@@ -33,14 +33,14 @@
                             @csrf
                             <div class="register__group">
                                 <input type="text" class="register__input position-relative" placeholder="Tên"
-                                    name="name">
+                                    name="name" value="{{old('name')}}">
                                 <img src="{{asset('images/frontend/register/mail.svg')}}" alt=""
                                     class="register__input-img ">
                             </div>
                             <div class="register__group">
                                 <input type="text" class="register__input position-relative" placeholder="Email"
-                                    name="email">
-                                <img src="{{asset('images/frontend/register/mail.svg')}}" alt=""
+                                    name="email" value="{{old('name')}}>
+                                <img src=" {{asset('images/frontend/register/mail.svg')}}" alt=""
                                     class="register__input-img ">
                             </div>
 

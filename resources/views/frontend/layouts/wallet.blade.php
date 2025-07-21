@@ -52,7 +52,7 @@
                     </div>
                     <div class="wallet__content">
                         <div class="wallet__title">Địa chỉ email</div>
-                        <div class="wall__subtitle">{{$user->email}}</div>
+                        <div class="wallet__subtitle">{{$user->email}}</div>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                     </div>
                     <div class="wallet__content">
                         <div class="wallet__title">Số điện thoại</div>
-                        <div class="wall__subtitle">{{$user->sdt}}</div>
+                        <div class="wallet__subtitle">{{!empty($user->sdt) ? $user->sdt : '(Không có thông tin)'}}</div>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,8 @@
                     </div>
                     <div class="wallet__content">
                         <div class="wallet__title">Địa chỉ</div>
-                        <div class="wall__subtitle">{{$user->dia_chi}}</div>
+                        <div class="wallet__subtitle">{{!empty($user->dia_chi) ? $user->dia_chi : '(Không có thông
+                            tin)'}}</div>
                     </div>
                 </div>
             </div>

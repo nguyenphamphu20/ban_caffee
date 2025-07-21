@@ -36,6 +36,10 @@ class BankController extends Controller
      */
     public function store(Request $request)
     {
+        $request->merge([
+            'month' => (int) $request->input('month'),
+            'year' => (int) $request->input('year'),
+        ]);
         $request->validate(
             [
                 "name" => "required",
@@ -112,6 +116,10 @@ class BankController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $request->merge([
+            'month' => (int) $request->input('month'),
+            'year' => (int) $request->input('year'),
+        ]);
         $bank = BankCard::find($id);
         $request->validate(
             [

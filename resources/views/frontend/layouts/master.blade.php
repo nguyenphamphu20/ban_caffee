@@ -54,7 +54,9 @@
         console.error('Bootstrap JS chưa được tải. Vui lòng kiểm tra lại.');
     }
 });
+
     </script>
+    @yield("script","")
 
 </body>
 

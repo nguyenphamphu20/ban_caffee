@@ -31,7 +31,7 @@
                         @csrf
                         <div class="register__group">
                             <input type="text" class="register__input position-relative" placeholder="Email"
-                                name="email">
+                                name="email" value="{{old('email')}}">
                             <img src="{{asset('images/frontend/register/mail.svg')}}" alt=""
                                 class="register__input-img ">
                         </div>
